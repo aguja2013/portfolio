@@ -1,2 +1,40 @@
-﻿body
-	background red
+﻿@import "normalize.styl"
+@import "fonts.styl"
+
+b = #fff
+n = #1d1d1d
+r = #ED1C24
+g = #999
+
+body
+	background n
+	color b
+.canvas
+	overflow hidden
+	position relative
+	&-main
+		padding 10px 0
+		text-align center
+	&-tecno
+		left -200px
+		position absolute
+		top 0
+		-webkit-transition 1s
+		width 200px
+		&.is-active
+			left 0
+	&-work
+		position absolute
+		right -200px
+		top 0
+		-webkit-transition 1s
+		width 200px
+		&.is-active
+			right 0
+	
+		
+		
+.title
+	background r
+	
+		
