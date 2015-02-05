@@ -1,14 +1,35 @@
-﻿@import "normalize.styl"
+﻿@import url(http://fonts.googleapis.com/css?family=Raleway:400,300)
+@import "normalize.styl"
 @import "fonts.styl"
+@import 'nib'
+
+// vendor-prefixes = o ms moz webkit
+
+
+// flex()
+   // -webkit-box-flex arguments
+   // -moz-box-flex arguments
+   // -ms-flex arguments
+   // flex arguments
+// order()
+   // -webkit-box-ordinal-group arguments
+   // -moz-box-ordinal-group arguments
+   // -ms-flex-order arguments
+   // -webkit-order arguments
+   // order arguments
 
 b = #fff
-n = #1d1d1d
+c = #348FED
+n = #000
 r = #ED1C24
 g = #999
 
 body
 	background n
 	color b
+	font-family 'Raleway'
+	font-weight 400
+	
 .canvas
 	overflow hidden
 	position relative
@@ -21,20 +42,48 @@ body
 		top 0
 		-webkit-transition 1s
 		width 200px
-		&.is-active
-			left 0
+		// &.is-active
+			// left 0
 	&-work
 		position absolute
 		right -200px
 		top 0
 		-webkit-transition 1s
 		width 200px
-		&.is-active
-			right 0
+		// &.is-active
+			// right 0
 	
-		
-		
+.dev
+	border-bottom 1px solid c
+	border-top 1px solid c
+	color c
+	font-weight 300
+	// animation 2s state infinite
+	
+// @keyframes state
+	// 0% 
+		// background r
+	// 100% 
+		// background c
+	
+.flex
+   display flex
+   flex-flow row
+   justify-content space-around    
+.nick-tw
+	color c
+	font-weight 300		
 .title
 	background r
-	
+	font-weight 400
+.tecno-button
+.work-button
+	background c
+	// border 1px solid r
+	display inline-block
+	margin-top 2rem
+	padding .5rem 1rem
+	width 50%
+.work-button
+	background r
 		
