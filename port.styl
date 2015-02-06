@@ -17,42 +17,88 @@
    // -ms-flex-order arguments
    // -webkit-order arguments
    // order arguments
-
-b = #fff
-c = #348FED
-n = #000
-r = #ED1C24
-g = #999
-
+a   = #3284CE
+b   = #fff
+c   = #348FED
+n   = #000
+r   = #ED1C24
+r-o = #CE1D2A
+g   = #999
+a
+	color b
 body
 	background n
 	color b
 	font-family 'Raleway'
 	font-weight 400
 	
+form 
+	margin-top 2rem
+	input
+	textarea
+		border 1px solid r
+		background transparent
+		margin-bottom 1.1rem
+		width 70%
+li
+	list-style none
+	text-decoration none
+textarea
+	height 7rem
+#submit
+	width 18%
+	background r
+.avatar
+	img
+		border-radius 50%
 .canvas
 	overflow hidden
 	position relative
+	text-align center
 	&-main
-		padding 10px 0
-		text-align center
-	&-tecno
-		left -200px
+		padding 10px 0		
+	&-tecno		
+		left -100%
 		position absolute
 		top 0
-		-webkit-transition 1s
-		width 200px
-		// &.is-active
-			// left 0
+		transition 1s
+		width 100%
+		&.is-activeT
+			left 0
 	&-work
+		background n
+		height 100%
 		position absolute
-		right -200px
+		right -100%
 		top 0
-		-webkit-transition 1s
-		width 200px
-		// &.is-active
-			// right 0
+		transition 1s
+		width 100%
+		&.is-activeW
+			right 0
+.form 
+	background n
+	border 1px solid r
+	bottom -100%
 	
+	position absolute
+	text-align center
+	transition 1s
+	width 100%
+	&.is-activeF
+		bottom 0
+.contacto
+	border-bottom 1px solid r	
+	color r
+	font-weight 300	
+.contactox
+	background r	
+	color b
+	font-size 2rem
+	font-weight 400	
+	padding 0 7px
+	position absolute 
+	top -27px 
+	right 0
 .dev
 	border-bottom 1px solid c
 	border-top 1px solid c
@@ -69,13 +115,34 @@ body
 .flex
    display flex
    flex-flow row
-   justify-content space-around    
+   justify-content space-around 
+
+   
 .nick-tw
 	color c
 	font-weight 300		
 .title
 	background r
 	font-weight 400
+.tecno-title
+	color r
+	font-style italic
+	font-weight 300
+	border-bottom 1px solid r 
+	border-top 1px solid r 	
+
+.tecno-li
+.work-li
+	margin-bottom 2em
+	padding-bottom 1em
+	border-bottom 1px solid c
+.tecno-li
+	border-bottom 1px solid r
+.tecno-ul
+.work-ul
+	margin 0 auto
+	text-align left
+	width 12rem
 .tecno-button
 .work-button
 	background c
@@ -84,6 +151,21 @@ body
 	margin-top 2rem
 	padding .5rem 1rem
 	width 50%
+	transition .5s
+	// &:hover
+		// background a
 .work-button
 	background r
-		
+	transition .5s
+	// &:hover
+		// background r-o
+.work-li
+	margin-bottom 2em
+	padding-bottom 1em
+	border-bottom 1px solid c
+.work-title
+	color c
+	font-style italic
+	font-weight 300
+	border-bottom 1px solid c 
+	border-top 1px solid c 	

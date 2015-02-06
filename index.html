@@ -9,7 +9,8 @@
 </head>
 <body>
 <section class="canvas">
-	<section class="canvas-tecno  is-active">
+	<section class="canvas-tecno" id="menuTecno">	
+	<h2 class="tecno-title">Habilidades</h2>
 		<ul class="tecno-ul">
 			<li class="tecno-li">HTML5</li>
 			<li class="tecno-li">CSS3</li>
@@ -18,8 +19,9 @@
 			<li class="tecno-li">JQuery</li>
 			<li class="tecno-li">Ajax</li>
 			<li class="tecno-li">Angular</li>
-			<li class="tecno-li">Backbone</li>
+			<li class="tecno-li">Backbone</li>			
 		</ul>
+		<button class="tecno-home" id="tecnoHome">HOME</button>
 	</section>
 	<section class="canvas-main">
 		<h1 class="title">Agustín Palmieri</h1>
@@ -34,19 +36,49 @@
 			<span class="icon-twitter"></span>
 		</div>
 		<nav class="principal flex">
-			<div class="tecno-button"><p class="tecno-p">Tecnologías</p></div>
-			<div class="work-button"><p class="work-p">Trabajos</p></div>
+			<div class="tecno-button" id="tecnoMenu"><p class="tecno-p">Tecnologías</p></div>
+			<div class="work-button" id="workMenu"><p class="work-p">Trabajos</p></div>
 		</nav>
+		<h2 class="contacto">Contacto</h2>
+		
+		
 	</section>
-	<section class="canvas-work  is-active">
+	<section class="form">
+		<h2 class="contactox">X</h2>
+		<form action="contacto.php" method="post">			
+			 <input id="nombre" type="text" name="nombre" placeholder="Nombre" required="" />			
+			 <input id="email" type="email" name="email" placeholder="Email" required="" />			
+			 <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required=""></textarea><br />
+			 <input id="submit" type="submit" name="submit" value="Enviar" />
+		</form>
+		</section>
+	<section class="canvas-work"  id="menuWork">
+		<h2 class="work-title">Desarrollos</h2>
 		<ul class="work-ul">
-			<li class="work-li">Pandawebs</li>
-			<li class="work-li">Palmieri&Zanoni</li>
-			<li class="work-li">Revolution</li>
-			<li class="work-li">Vivir en Meditación</li>
-			<li class="work-li">Dr Gastón Augusto</li>
+			<li class="work-li"><a href="#" class="link">Pandawebs</a></li>
+			<li class="work-li"><a href="#" class="link">Palmieri&Zanoni</a></li>
+			<li class="work-li"><a href="#" class="link">Revolution</a></li>
+			<li class="work-li"><a href="#" class="link">Vivir en Meditación</a></li>
+			<li class="work-li"><a href="#" class="link">Dr Gastón Augusto</a></li>
 		</ul>
+		<button class="work-home" id="workHome">HOME</button>
 	</section>
 </section>
+<script>
+	var $buttonWork = document.getElementById('workMenu');
+	var $buttonTecno = document.getElementById('tecnoMenu');
+	var $buttonirHomeW = document.getElementById('workHome');
+	var $buttonirHomeT = document.getElementById('tecnoHome');
+	var $menuTecno = document.getElementById('menuTecno');
+	var $menuWork = document.getElementById('menuWork');
+	
+	var showWorkMenu = function(){
+		$menuWork.classList.add('is-activeW');
+	<!-- 	$buttonTecno.classList.add('is-activeT'); -->
+	
+	}
+	
+	$buttonWork.addEventListener("click", showWorkMenu);
+</script>
 </body>
 </html>
