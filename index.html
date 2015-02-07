@@ -12,14 +12,14 @@
 	<section class="canvas-tecno" id="menuTecno">	
 	<h2 class="tecno-title">Habilidades</h2>
 		<ul class="tecno-ul">
+			<li class="tecno-li">GIT</li>
 			<li class="tecno-li">HTML5</li>
 			<li class="tecno-li">CSS3</li>
-			<li class="tecno-li">Javascript</li>
-			<li class="tecno-li">Stylus</li>
+			<li class="tecno-li">Javascript</li>			
 			<li class="tecno-li">JQuery</li>
 			<li class="tecno-li">Ajax</li>
 			<li class="tecno-li">Angular</li>
-			<li class="tecno-li">Backbone</li>			
+						
 		</ul>
 		<button class="tecno-home" id="tecnoHome">HOME</button>
 	</section>
@@ -39,12 +39,12 @@
 			<div class="tecno-button" id="tecnoMenu"><p class="tecno-p">Tecnologías</p></div>
 			<div class="work-button" id="workMenu"><p class="work-p">Trabajos</p></div>
 		</nav>
-		<h2 class="contacto">Contacto</h2>
+		<h2 class="contacto" id="linkContact">Contacto</h2>
 		
 		
 	</section>
-	<section class="form">
-		<h2 class="contactox">X</h2>
+	<section class="form" id="formContact">
+		<h2 class="contactox" id="formHome">X</h2>
 		<form action="contacto.php" method="post">			
 			 <input id="nombre" type="text" name="nombre" placeholder="Nombre" required="" />			
 			 <input id="email" type="email" name="email" placeholder="Email" required="" />			
@@ -67,18 +67,36 @@
 <script>
 	var $buttonWork = document.getElementById('workMenu');
 	var $buttonTecno = document.getElementById('tecnoMenu');
+	var $buttonContact = document.getElementById('linkContact');
+	var $formContact = document.getElementById('formContact');
+	
 	var $buttonirHomeW = document.getElementById('workHome');
 	var $buttonirHomeT = document.getElementById('tecnoHome');
+	var $buttonirHomeF = document.getElementById('formHome');
 	var $menuTecno = document.getElementById('menuTecno');
 	var $menuWork = document.getElementById('menuWork');
 	
 	var showWorkMenu = function(){
-		$menuWork.classList.add('is-activeW');
-	<!-- 	$buttonTecno.classList.add('is-activeT'); -->
-	
+		$menuWork.classList.add('is-activeW');	
+	}
+	var showTecnoMenu = function(){		
+		$menuTecno.classList.add('is-activeT');	
+	}
+	var showForm = function(){		
+		$formContact.classList.add('is-activeF');	
+	}
+	var hiddenTecnoMenu = function(){		
+		$menuTecno.classList.remove('is-activeT');
+		$menuWork.classList.remove('is-activeW');
+		$formContact.classList.remove('is-activeF');
 	}
 	
+	$buttonTecno.addEventListener("click", showTecnoMenu);
 	$buttonWork.addEventListener("click", showWorkMenu);
+	$buttonirHomeW.addEventListener("click", hiddenTecnoMenu);
+	$buttonirHomeT.addEventListener("click", hiddenTecnoMenu);
+	$buttonirHomeF.addEventListener("click", hiddenTecnoMenu);
+	$buttonContact.addEventListener("click", showForm);
 </script>
 </body>
 </html>
